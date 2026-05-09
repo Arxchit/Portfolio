@@ -59,17 +59,8 @@ const Hero = () => {
 
   return (
     <section className="h-screen w-full flex-col relative overflow-hidden">
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-        <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
-          Hi, I am Archit <span className="waving-hand">👋</span>
-        </p>
-        <p className="hero_tag text-gray_gradient">
-          Building Products & Brands
-        </p>
-      </div>
-
       <div className="w-full h-full absolute inset-0">
-        {/* <Leva /> */}
+        {/* Canvas stays full-width */}
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 20]} />
@@ -96,10 +87,25 @@ const Hero = () => {
         </Canvas>
       </div>
 
-      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-        <a href="#about" className="w-fit">
-          <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
-        </a>
+      {/* Hero text content - constrained to container width */}
+      <div className="relative z-20 c-container pointer-events-none">
+        <div className="flex flex-col sm:mt-36 mt-20 gap-3">
+          <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
+            Hi, I am Archit <span className="waving-hand">👋</span>
+          </p>
+          <p className="hero_tag text-gray_gradient">
+            Building Products & Brands
+          </p>
+        </div>
+      </div>
+
+      {/* Button at bottom - constrained to container width */}
+      <div className="absolute bottom-7 left-0 right-0 z-10 flex justify-center pointer-events-auto">
+        <div className="c-container w-full">
+          <a href="#about" className="w-fit">
+            <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+          </a>
+        </div>
       </div>
     </section>
   );

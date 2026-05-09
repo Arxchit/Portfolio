@@ -2,13 +2,16 @@ import React from 'react'
 import Navbar from './Sections/Navbar'
 import Hero from './Sections/Hero'
 import About from './Sections/About'
-
+import Projects from './Sections/Projects'
 const App = () => {
   return (
-    <main className='max-w-7-xl mx-auto'>
+    <main>
       <Navbar/>
       <Hero/>
-      <About/>
+      <div className='c-container'>
+        <About/>
+        <Projects/>
+      </div>
     </main>
   )
 }
