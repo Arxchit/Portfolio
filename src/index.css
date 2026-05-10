@@ -440,15 +440,31 @@ body {
   max-width: 36rem;
   position: relative;
   z-index: 10;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  margin-top: 3rem;
+  padding: 2rem 1.25rem;
+  border-radius: 12px;
+}
+.c-para {
+  color: #9698a1
 }
 @media (min-width: 640px) {
   .contact-container {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding: 2.5rem;
   }
+}
+
+.contact-intro-card {
+  background-color: #1c1c21;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #3a3a49;
+  margin-bottom: 2rem;
+}
+
+.contact-intro-text {
+  color: #afb0b6;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .field-label {
@@ -458,39 +474,48 @@ body {
 
 .field-input {
   width: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  margin-top: 7px;
+  background-color: #1c1c21;
+  color: #e4e4e6;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
   min-height: 3.5rem;
-  border-radius: 0.5rem;
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+  transition: outline 0.3s ease;
 }
 .field-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: #62646c;
 }
 .field-input:focus {
-  outline: none;
+  outline: 1px solid #3a3a49;
 }
 
 .field-btn {
-  background: rgba(0, 0, 0, 0.5);
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  background-color: #3a3a4a;
+  color: white;
+  padding: 12px 20px;
   min-height: 3rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.125rem;
-  color: white;
   gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+.field-btn:hover:not(:disabled) {
+  background-color: #4a4a59;
+  transform: translateY(-2px);
+}
+.field-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+.field-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .field-btn_arrow {
@@ -510,6 +535,9 @@ body {
   align-items: center;
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.fot-p {
+  color : #afb0b6;
 }
 
 .waving-hand {
