@@ -58,7 +58,7 @@ const Hero = () => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet)
 
   return (
-    <section className="h-screen w-full flex-col relative overflow-hidden">
+    <section id="home" className="h-screen w-full flex-col relative overflow-hidden">
       <div className="w-full h-full absolute inset-0">
         {/* Canvas stays full-width */}
         <Canvas className="w-full h-full">
